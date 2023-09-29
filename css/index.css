@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/Shiny.png');
+    background-size: auto;
+    /* Ajusta el tamaño de la imagen al tamaño de la ventana del navegador */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Mantiene la imagen fija mientras se desplaza la página */
+    background-position: center;
+    /* Centra la imagen en la pantalla */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.logo img {
+    width: 80px;
+    /* Ajusta el tamaño de tu logo */
+    margin-right: 10px;
+}
+
+.nombre-pagina {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para el contenido */
+.contenido {
+    flex: 1;
+    /* El contenido ocupará todo el espacio restante */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Seccion noticias*/
+.noticias {
+    margin-top: 20px;
+}
+
+.noticia {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.noticia h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.noticia p {
+    margin: 10px 0;
+}
+
+/* Estilos de enlaces en las noticias */
+.noticia a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el footer pegajoso */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0;
+    /* Evita que el footer se encoja */
+}
+
+/*Contenido del footer*/
+.redes-sociales a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de menú */
+.menu-button {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el botón de menú */
+.menu-button {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    /* Ajusta la distancia desde la parte superior del header */
+    left: 10px;
+    z-index: 3;
+}
+
+/* Estilos para el botón de menú */
+.menu-button {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 16.25%;
+    /* Centra verticalmente el botón de menú */
+    left: 10px;
+    transform: translateY(-50%);
+    /* Centra verticalmente el botón de menú */
+    z-index: 3;
+    transition: 0.4s;
+}
+
+.menu-button:hover .bar {
+    background-color: #fff;
+    /* Cambia el color de las barras al pasar el cursor sobre el icono del menú */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú desplegable */
+#menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 80px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    padding: 15px;
+    text-align: center;
+    /* Centra el contenido horizontalmente en el menú */
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+#menu ul li a:hover {
+    background-color: #444;
+}
+
+/* Mostrar el menú desplegable en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+        margin: 15px;
+    }
+
+    #menu {
+        left: -250px;
+    }
+}
